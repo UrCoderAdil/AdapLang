@@ -1,0 +1,30 @@
+# Core API
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0
+
+# Database
+sqlalchemy>=2.0.30
+psycopg2-binary>=2.9.9
+alembic>=1.13.1
+pgvector>=0.3.2
+
+# IRT / ML
+numpy>=1.26.4
+scipy>=1.13.0
+girth>=0.8.0
+
+# SRS
+fsrs>=0.5.0
+
+# LLM & Quiz Generation
+anthropic>=0.28.0
+instructor>=1.3.0
+sentence-transformers>=3.0.0
+
+# Caching
+redis>=5.0.4
+
+# Utilities
+python-dotenv>=1.0.1
+httpx>=0.27.0

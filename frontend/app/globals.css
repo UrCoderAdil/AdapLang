@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f0e17;
+  --surface: #1a1a2e;
+  --border: #2d2d44;
+  --gold: #f5a623;
+  --red: #e63946;
+  --green: #2dc653;
+  --blue: #457b9d;
+  --purple: #8338ec;
+  --text: #fffffe;
+  --muted: #a7a9be;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+/* Pixel-art style border utility */
+.rpg-border {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.rpg-button {
+  @apply px-6 py-3 rounded-lg font-semibold transition-all duration-200 active:scale-95;
+}
+
+.rpg-button-gold {
+  @apply rpg-button bg-rpg-gold text-rpg-bg hover:brightness-110;
+}
+
+.rpg-button-ghost {
+  @apply rpg-button border border-rpg-border text-rpg-muted hover:text-rpg-text hover:border-rpg-gold;
+}
